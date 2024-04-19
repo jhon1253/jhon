@@ -1,0 +1,19 @@
+{
+   "nombre": "Jhon sebastian quinayas ceron",
+   "edad": 20,
+   "email":"jhon@ayte.com",
+
+   "sitios frecuentes":[
+    {
+        "tipo":"casa", 
+        "direcicon":"popayan"
+    },
+
+    {
+        "tipo":"pueblo", 
+        "direcicon":"vgaray"
+    }
+
+   ]
+   
+}
