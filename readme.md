@@ -1,3 +1,3 @@
 #  PRIMER PROYECTO README
-## Agregar trabajos realizados
+## Trabajo realizado por: Jhon Sebastian Quinayas Ceron y Nicol Tapasco Ortíz
 
