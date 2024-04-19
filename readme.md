@@ -1,3 +1,3 @@
-#  readme proyectos
-## agregar trabajos realizados
+#  Readme proyectos
+## Agregar trabajos realizados
 
