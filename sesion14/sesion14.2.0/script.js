@@ -23,3 +23,10 @@ function Rojo(){
 
     localStorage.setItem('fondo', fondo);
 }
+function Verde(){
+    fondo = "#00ff00";
+    document.getElementById("body").style.backgroundColor = fondo;
+  
+
+    localStorage.setItem('fondo', fondo);
+}
