@@ -1,5 +1,5 @@
 #  PRIMER PROYECTO README SESION 24. 
-## 19/04/2024
+# 19/04/2024
 
 ## Trabajo realizado por: Jhon Sebastian Quinayas Ceron y Nicol Tapasco Ortíz
 
