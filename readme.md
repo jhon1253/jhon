@@ -6,7 +6,7 @@
 
 
 ## Explicacion del contenido de nuestro repositorio readme.md.
-## REPOSITORIO
+## REPOSITORIO README.MD
 
 
 
