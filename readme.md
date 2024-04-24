@@ -1,4 +1,4 @@
-![alt text](20230718_170430 (1).png)
+![alt text](20230718_170430.png)
 #  PRIMER PROYECTO README SESION 24. 
 # 19/04/2024
 
