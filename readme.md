@@ -2,11 +2,11 @@
 #  PRIMER PROYECTO README SESION 24. 
 # 19/04/2024
 
-## Trabajo realizado por: Jhon Sebastian Quinayas Ceron y Nicol Tapasco Ortíz
+## Trabajo realizado por: Jhon Sebastian Quinayas Ceron.
 
 
 
-## Explicacion del contenido de nuestro repositorio readme.md.
+## Explicacion del contenido del repositorio readme.md.
 ## REPOSITORIO README.MD
 
 
