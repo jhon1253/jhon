@@ -13,9 +13,11 @@ for (let i = 0; i < numeros.length; i++) {
     suma += numeros[i];
 }
 
-
-
 console.log("la suma de los elementos del array es: " + suma);
+
+
+
+
 let library = [
     { title: "Cien años de soledad", author: "Gabriel García Márquez", year: 1967 },
     { title: "1984", author: "George Orwell", year: 1949 },
@@ -23,7 +25,7 @@ let library = [
     { title: "La Odisea", author: "Homero", year: -800 }  // 
 ];
 
-let opcion = prompt("Si deseas buscar un libro por autor ingresa 1 y si lo deceas por año ingresa 2, o si deseas ver todas las propiedades de los libros ,marca 3: ");
+let opcion = prompt("Si deseas buscar un libro por autor ingresa 1, si lo deceas por año ingresa 2 o si deseas ver todas las propiedades de los libros ,marca 3: ");
 if (opcion === "1") {
 let autor = prompt("Nombre de autor: ");
 for (let i = 0; i < library.length; i++) {
