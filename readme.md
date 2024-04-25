@@ -7,7 +7,7 @@
 
 ## REPOSITORIO README.MD
 
-Los lenguajes que manejo son:
+## Los lenguajes que manejo son:
 - HTML
 - JavaScript
 - GIT
