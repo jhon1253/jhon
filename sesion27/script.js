@@ -18,38 +18,32 @@ console.log("la suma de los elementos del array es: " + suma);
 
 
 
-let library = [
-    { title: "Cien años de soledad", author: "Gabriel García Márquez", year: 1967 },
-    { title: "1984", author: "George Orwell", year: 1949 },
-    { title: "Don Quijote de la Mancha", author: "Miguel de Cervantes", year: 1605 },
-    { title: "La Odisea", author: "Homero", year: -800 }  // 
+let libreria = [
+    { titulo: "Cien años de soledad", Autor: "Gabriel García Márquez", Año: 1967 },
+    { titulo: "1984", Autor: "George Orwell", Año: 1949 },
+    { titulo: "Don Quijote de la Mancha", Autor: "Miguel de Cervantes", Año: 1605 },
+    { titulo: "La Odisea. ", Autor: "Homero", Año: -800 }  // 
 ];
-
 let opcion = prompt("Si deseas buscar un libro por autor ingresa 1, si lo deceas por año ingresa 2 o si deseas ver todas las propiedades de los libros ,marca 3: ");
 if (opcion === "1") {
 let autor = prompt("Nombre de autor: ");
-for (let i = 0; i < library.length; i++) {
-    if (autor === library[i].author) {
-    console.log("libro disponible: " + library[i].title + "Autor: " + library[i].author + "Año: " + library[i].year)
-    
-    console.log(library[i])
+for (let i = 0; i < libreria.length; i++) {
+    if (autor === libreria[i].Autor) {
+    console.log("libro disponible: " + libreria[i].titulo + "Autor: " + libreria[i].Autor + "Año: " + libreria[i].Año)
 } 
 } 
-    
 } else if (opcion === "2") {
-    let año = parseInt(prompt("Nombre el año: "));
-for (let i = 0; i < library.length; i++) {
-    if (año === library[i].year) {
-    console.log("libro disponible: " + "Titulo" + library[i].title + "Autor: " + library[i].author + "Año: " + library[i].year)
-    
-    console.log(library[i])
+    let año = parseInt(prompt("Nombre el año que deseas buscar: "));
+for (let i = 0; i < libreria.length; i++) {
+    if (año === libreria[i].Año) {
+    console.log("libro disponible: " + libreria[i].titulo + "Autor: " + libreria[i].Autor + "Año: " + libreria[i].Año)
 } 
 }
-
+    
 } else if (opcion === "3") {
     
-for (let i = 0; i < library.length; i++) {
+for (let i = 0; i < libreria.length; i++) {
     
-    console.log("libro disponible: " + library[i].title + " Autor: " + library[i].author + " Año: " + library[i].year)
+    console.log("libro disponible: " + libreria[i].titulo + " Autor: " + libreria[i].Autor + " Año: " + libreria[i].Año)
 }
 }
