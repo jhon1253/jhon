@@ -15,7 +15,7 @@ Los lenguajes que manejo son:
 Aqui puedes conocer mas de JavaScript [JavaScript pagina](https://developer.mozilla.org/es/docs/Web/JavaScript).
 
 
-#### Una pequeña intriduccion sobre mi...continuara 
+#### Una pequeña intriduccion sobre mi...Continuara 
 
 ### FIN  DE CONTENIDO README.MD
-### GRACIAS.
+### GRACIAS POR VER.
