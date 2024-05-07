@@ -1,0 +1,27 @@
+* {
+    font-family: Georgia;
+    text-align: center;
+}
+#titulo{
+    color: rgba(0, 38, 255, 0.795);
+}
+
+.subtitulo{
+    color: aqua;
+    margin-top: 50px;
+}
+button{
+background-color: blue;
+color: black;
+border-radius: 5px;
+margin-top: 20px;
+}
+input{
+    border-color: chartreuse;
+    border-radius: 10px;
+    width: 250px;
+    height: 30px;
+}
+body{
+    background-image: url("https://dinahosting.com/blog/upload/2023/04/lenguajes-de-programacion-2023.jpg");
+}
