@@ -3,7 +3,7 @@
     text-align: center;
 }
 #titulo{
-    color: rgba(0, 38, 255, 0.795);
+    color: rgba(5, 5, 5, 0.795);
 }
 
 .subtitulo{
@@ -12,7 +12,7 @@
 }
 button{
 background-color: blue;
-color: black;
+color: rgb(0, 0, 0);
 border-radius: 5px;
 margin-top: 20px;
 }
@@ -23,5 +23,5 @@ input{
     height: 30px;
 }
 body{
-    background-image: url("https://dinahosting.com/blog/upload/2023/04/lenguajes-de-programacion-2023.jpg");
+    background-image: url("https://www.ucatalunya.edu.co/img/blog/los-mejores-lenguajes-de-programacion-en-el-desarrollo-web-y-su-importancia-en-la-era-digital.jpg");
 }

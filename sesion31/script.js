@@ -1,12 +1,15 @@
-let inventario = [{
+let inventario = [
+    {
     nombre: 'Camisas',
     precio: 60000,
     cantidad: 76
-},{
+}, 
+{
     nombre: 'Pantalones',
     precio: 90000,
     cantidad: 67
-},{
+}, 
+{
     nombre: 'Zapatillas',
     precio: 200000,
     cantidad: 46
@@ -30,23 +33,23 @@ function agregarInventario() {
             productoA.precio = precioA
         }
     } else {
-        inventario.push({nombre: nombreA, precio: precioA, cantidad: cantidadA})
+        inventario.push({ nombre: nombreA, precio: precioA, cantidad: cantidadA })
     }
 }
 function venderInventario() {
     console.log("Vender producto: ")
-   
+
     let nombreA = prompt("¿Que producto deseas comprar? ")
     let cantidadA = prompt("¿Que cantidad deseas comprar? ")
     let productoA = inventario.find((item) => item.nombre === nombreA)
     if (productoA != undefined) {
-        if (productoA.cantidad >= cantidadA){
+        if (productoA.cantidad >= cantidadA) {
             productoA.cantidad -= cantidadA
-        }else {
+        } else {
             console.log(`producto: ${productoA.nombre} - Precio: ${productoA.precio} cantidad insuficiente, Cantidad disponible: ${productoA.cantidad}`)
         }
     } else {
-         console.log(`producto: ${nombreA} No disponible `)
+        console.log(`producto: ${nombreA} No disponible `)
     }
 }
 let continuar = true
