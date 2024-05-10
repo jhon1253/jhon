@@ -7,23 +7,40 @@ let resultado = ''
 
 console.log(aleatorio)
 
-// parseInt(prompt("Ingresa un numero entre el " + numMin + " y el " + numMax + ".\n"));
 
-function AdivinaNumero (){
-     intentos++;
+
+function AdivinaNumero() {
+    intentos++;
     numero = document.getElementById('inputGuess').value
-    
-if(numero < aleatorio){
-    resultado = ("Intenta con un numero mas alto");
-        }
-else if (numero > aleatorio){
-    resultado = ("Intenta con un numero mas bajo");
-        }
-else {
-    resultado = ("¡Acertaste! adivinaste el numero en: " + (intentos) + " intentos.");
+
+    if (numero < numMin) {
+        resultado = ("Numero no permitido, intenta con uno MAYOR a 0 ")
+    }
+    else if (numero < aleatorio) {
+        resultado = ("Intenta con un numero mas alto");
+    } else if (numero > numMax) {
+        resultado = ("Numero excedio el limite");
+    }
+    else if (numero > aleatorio) {
+        resultado = ("Intenta con un numero mas bajo");
+    }
+    else {
+        resultado = ("¡Acertaste! adivinaste el numero en: " + (intentos) + " intentos.");
+    }
+    document.getElementById("resultado").innerText = resultado
+
+    document.getElementById("subtitulo").innerHTML = `<h3 style="color:red">Adivina El Numero</h3>`
 }
-document.getElementById("resultado").innerText = resultado
-}
+
+
+
+
+
+
+
+
+
+
 
 
 

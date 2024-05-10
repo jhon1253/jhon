@@ -3,11 +3,11 @@
     text-align: center;
 }
 #titulo{
-    color: rgba(5, 5, 5, 0.795);
+    color: rgba(2, 196, 245, 0.986);
 }
 
 .subtitulo{
-    color: aqua;
+    color: rgb(53, 241, 78);
     margin-top: 50px;
 }
 button{
@@ -17,11 +17,11 @@ border-radius: 5px;
 margin-top: 20px;
 }
 input{
-    border-color: chartreuse;
-    border-radius: 10px;
+    border-color: aqua;
+    border-radius: 50px;
     width: 250px;
     height: 30px;
 }
 body{
-    background-image: url("https://www.ucatalunya.edu.co/img/blog/los-mejores-lenguajes-de-programacion-en-el-desarrollo-web-y-su-importancia-en-la-era-digital.jpg");
+    background-image: url("https://www.bbvaapimarket.com/wp-content/uploads/2015/09/bbva-open4u-herramientas-programacion-javascript.png");
 }
