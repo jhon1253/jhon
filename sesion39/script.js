@@ -130,5 +130,3 @@ const listaDeCompra = [
 // Ejercicio 3:
 // Crear un sistema que gestione reservas para eventos. El sistema deberá poder añadir eventos, 
 // registrar asistentes a cada evento, y generar un reporte final usando map y template literals.
-
-
