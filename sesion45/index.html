@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-W609DbUdEbY_dkk0v2v0MI_3wM4sdDodDA&s);
+        }
+        button{
+            background: rgb(221, 82, 82)
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -13,7 +23,7 @@
     <h2>OPERACIONES BASICAS</h2>
     <div>
         <input id="number1" type="number">
-        <span id="operador"> ? </span>
+        <span id="operador">?</span>
         <input id="number2" type="number">
         <span>=</span>
         <span id="resul">RESULTADO</span>
@@ -28,23 +38,24 @@
         <button type="button" onclick="calcular('Raiz')"> Raiz </button>
     </div>
 
+    
     <h2>OPERACIONES AVANZADAS</h2>
 
     <div>
         <input id="number3" type="number"> 
         <span>=</span>
-        <span id="resul3">RESULTADO</span>
+        <span id="resultado">RESULTADO</span>
     </div>
 
     <div>
 
-        <button type="button" onclick="calcularOpeAvan('Redondear')"> Redondear </button>
-        <button type="button" onclick="calcularOpeAvan('ValorAbsoluto')"> ValorAbsoluto </button> 
-        <script src="main.js" type="module"></script>
+        <button type="button" onclick="calculoOpeAvan('Redondear')"> Redondear </button>
+        <button type="button" onclick="calculoOpeAvan('ValorAbsoluto')"> ValorAbsoluto </button> 
+        <script src="script.js" type="module"></script>
     </div>
 
 
-    <script src="main.js" type="module"></script>
+    
 </body>
 
 </html>

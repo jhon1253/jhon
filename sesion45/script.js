@@ -47,25 +47,26 @@ window.calcular = calcular
 
 
 
-document.getElementById("resul3")
+document.getElementById("resultado")
 
 
-function calcularOpeAvan(operacion) {
+function calculoOpeAvan(operacion) {
 
     const number3 = parseFloat(document.getElementById('number3').value)
 
 
     switch (operacion) {
         case "Redondear":
-            resul3.textContent = Redondear(number3)
+            resultado.textContent = Redondear(number3)
             break;
         case "ValorAbsoluto":
-            resul3.textContent = ValorAbsoluto(number3)
-                break;
+            resultado.textContent = ValorAbsoluto(number3)
+            break;
 
         default:
             break;
     }
 }
-window.calcularOpeAvan = calcularOpeAvan
+
+window.calculoOpeAvan = calculoOpeAvan
 
