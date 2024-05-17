@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+    <div class="form-receta">
+        <h1>RECETAS</h1>
+        <form id="recipe-form">
+            <label for="nombreReceta">Nombre de la receta</label>
+            <br>
+            <input type="text" id="nombreReceta" placeholder="NOMBRE DE LA RECETA" required>
+            <br>
+            <label for="ingreReceta">Ingredientes</label>
+            <br>
+            <input type="text" id="ingreReceta" placeholder="INGREDIENTES" required>
+            <br>
+            <label for="cantidad">Cantidad en gr</label>
+            <br>
+            <input type="text" id="cantidad" placeholder="CANTIDAD" required>
+            <br>
+            <label for="preparacion">Preparacion</label>
+            <br>
+            <input type="text" id="preparacion" placeholder="Preparacion" required>
+            <br>
+            <button type="submit">AGREGAR RECETA</button>
+        </form>
+        <ul id="recipe-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
