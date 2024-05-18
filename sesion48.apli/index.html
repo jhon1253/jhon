@@ -9,27 +9,29 @@
 </head>
 
 <body>
+
     <div class="form-receta">
-        <h1>RECETAS</h1>
+        <h1 id="titulo">RECETAS</h1>
         <form id="recipe-form">
-            <label for="nombreReceta">Nombre de la receta</label>
+            <label for="nombreReceta" id="nombreReceta">Nombre de la receta</label>
             <br>
-            <input type="text" id="nombreReceta" placeholder="NOMBRE DE LA RECETA" required>
+            <input type="text" id="nombreReceta" placeholder="¿Que vas a preparar?" required>
             <br>
-            <label for="ingreReceta">Ingredientes</label>
+            <label for="preparacion" id="pasospreparacion">Preparacion</label>
+            <br>
+            <input type="text" id="preparacion1" placeholder="Pasos a seguir" required>
+            <br>
             <br>
             <input type="text" id="ingreReceta" placeholder="INGREDIENTES" required>
             <br>
-            <label for="cantidad">Cantidad en gr</label>
             <br>
             <input type="text" id="cantidad" placeholder="CANTIDAD" required>
             <br>
-            <label for="preparacion">Preparacion</label>
-            <br>
-            <input type="text" id="preparacion" placeholder="Preparacion" required>
-            <br>
-            <button type="submit">AGREGAR RECETA</button>
+
+
         </form>
+        <button type="submit">AGREGAR INGREDIENTE</button>
+        <button type="submit">AGREGAR RECETA</button>
         <ul id="recipe-list"></ul>
     </div>
     <script src="script.js"></script>

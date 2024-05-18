@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LocalStorage Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario</title>
+
+    <link rel="stylesheet" href="stilo.css">
+
 </head>
+
 <body>
-<script src="script.js"></script>
+    <div class="agregarRecetas">
+        <h2>RECETA COMIDAS</h2>
+        <form id="formaReceta">
+            <label for="nombreReceta">Nombre de la receta:</label>
+            <br>
+            <input type="text" id="nombreReceta" required>
+            <br>
+            <br>
+            <div class="listaIngredientes">
+                <div class="ingredient">
+                    <input type="text" class="ingredient-name" placeholder="Ingrediente" required>
+                    <input type="text" class="ingredient-quantity" placeholder="Cantidad" required>
+                </div>
+            </div>
+            <br>
+            <br>
+            <label for="recipe-instruction">Preparación:</label>
+            <textarea id="recipe-instruction" required></textarea><br>
+            <button type="button" id="add-ingredient">Agregar Ingrediente</button>
+            <button type="submit">Agregar Receta</button>
+
+
+        </form>
+        <hr>
+        <div id="recipe-list"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
