@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         addRecipe();
     });
-    
+
     // Agregar nuevo input de ingrediente
     document.getElementById('add-ingredient').addEventListener('click', () => {
         const ingredientList = document.querySelector('.listaIngredientes');

@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/009/433/370/non_2x/healthy-food-composition-of-vegetables-on-a-white-background-flat-illustration-fresh-organic-vegetable-green-natural-background-vegetarian-food-healthy-eating-vector.jpg);
+    background-size: cover; /* La imagen cubrirá toda la pantalla */
+    background-position: center;
+    height: 100vh; /* Altura del cuerpo al 100% de la altura de la ventana */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+}
+
+.recipe-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.ingredient-list {
+    margin-bottom: 10px;
+}
+
+.ingredient {
+    margin-bottom: 5px;
+}
