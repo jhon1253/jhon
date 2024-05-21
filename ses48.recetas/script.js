@@ -94,7 +94,7 @@ function mostrarRecetaEnVistaPrevia(receta) {
         ingredienteHTML.textContent = ingrediente.nombre + ": " + ingrediente.cantidad;
         listaIngredientesHTML.appendChild(ingredienteHTML);
     });
-
+    
     // Crear un botón para eliminar la receta
     var btnEliminarReceta = document.createElement("button");
     btnEliminarReceta.textContent = "Eliminar Receta";
