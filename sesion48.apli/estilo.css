@@ -1,14 +1,19 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-image: url(https://img.freepik.com/vector-premium/comida-comida-rapida-fondo-blanco_1308-102199.jpg);
-    background-size: cover; /* La imagen cubrirá toda la pantalla */
+    background-size: cover; 
+    
     background-position: center;
-    height: 100vh; /* Altura del cuerpo al 100% de la altura de la ventana */
-    margin: 0; /* Elimina el margen por defecto */
-    padding: 0; /* Elimina el relleno por defecto */
-}
+    height: 100vh;        
+    margin: 0;             
+    padding: 0;            
+} */
+/* La imagen cubrirá toda la pantalla */
+/* Altura del cuerpo al 100% de la altura de la ventana */
+/* Elimina el margen por defecto */
+/* Elimina el relleno por defecto */
 
-#titulo{
+/* #titulo{
     color: rgb(239, 250, 250);
 }
 #nombreReceta{
@@ -20,4 +25,4 @@ body {
 }
 button {
     background-color: rgb(0, 140, 255);
-}
+} */

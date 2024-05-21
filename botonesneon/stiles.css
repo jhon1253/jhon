@@ -1,0 +1,80 @@
+body{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: mario;
+}
+button {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  font-family: mario;
+}
+
+.neon-button-blue {
+  color: #03e9f4;
+  font-family: mario;
+}
+
+.neon-button-pink {
+  color: #e100ff;
+  font-family: mario;
+}
+
+.neon-button-green {
+  color: #00ff00;
+  font-family: mario;
+}
+
+.neon-button-blue:hover {
+  color: #fff;
+  font-family: mario;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+}
+
+.neon-button-pink:hover {
+  color: #fff;
+  box-shadow: 0 0 5px #e100ff, 0 0 25px #e100ff, 0 0 50px #e100ff, 0 0 200px #e100ff;
+  font-family: mario;
+}
+
+.neon-button-green:hover {
+  color: #fff;
+  box-shadow: 0 0 5px #00ff00, 0 0 25px #00ff00, 0 0 50px #00ff00, 0 0 200px #00ff00;
+  font-family: mario;
+}
+
+.neon-button-blue:before, .neon-button-pink:before, .neon-button-green:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  transition: 0.5s;
+  font-family: mario;
+}
+
+.neon-button-blue:hover:before, .neon-button-pink:hover:before, .neon-button-green:hover:before {
+  left: 100%;
+  font-family: mario;
+}
+@font-face {
+  font-family:mario ;
+  src: url(../super_mario_256/SuperMario256.ttf)
+}
