@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+background-repeat: no-repeat;
+}
+.imagen{
+  vertical-align: middle;  
+  width: 106px;
+  height: 100px;
+  border-radius: 80px;
+}
+#hoja{
+    color: aliceblue;
+}
