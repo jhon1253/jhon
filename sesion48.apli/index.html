@@ -1,70 +1,33 @@
-<!-- <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetario</title>
-    <link rel="stylesheet" href="estilo.css">
-
-</head>
-
-<body>
-
-    <div class="form-receta">
-        <h1 id="titulo">RECETAS</h1>
-        <form id="recipe-form">
-            <label for="nombreReceta" id="nombreReceta">Nombre de la receta</label>
-            <br>
-            <input type="text" id="nombreReceta" placeholder="¿Que vas a preparar?" required>
-            <br>
-            <label for="preparacion" id="pasospreparacion">Preparacion</label>
-            <br>
-            <input type="text" id="preparacion1" placeholder="Pasos a seguir" required>
-            <br>
-            <br>
-            <input type="text" id="ingreReceta" placeholder="INGREDIENTES" required>
-            <br>
-            <br>
-            <input type="text" id="cantidad" placeholder="CANTIDAD" required>
-            <br>
-
-
-        </form>
-        <button type="submit">AGREGAR INGREDIENTE</button>
-        <button type="submit">AGREGAR RECETA</button>
-        <ul id="recipe-list"></ul>
-    </div>
-    <script src="script.js"></script>
-</body>
-
-</html> -->
-
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="estilo.css">
     <script src="script.js"></script>
 </head>
 
-<body>
-    <p class="h">Nombre:</p>
-    <input class="m" id="nombreReceta" type="text"></input>
-    <p class="h">Preparación:</p>
-    <textarea class="o"    id="preparacionReceta" name="textarea" rows="5" cols="70"></textarea>
+<body onload="LeerLocalstorage()">
+    <p>Nombre:</p>
+    <input id="nombreReceta" type="text"></input>
+    <p>Preparación:</p>
+    <textarea id="preparacionReceta" name="textarea" rows="10" cols="50"></textarea>
+    <p>Ingredientes:</p>
+    <span>Ingrediente: </span></span><input id="nombreIngrediente" type="text"></input>
     <br>
-    <span class="p">Ingrediente: </span></span><input id="nombreIngrediente" type="text"></input>
-    <span class="p">Cantidad: </span><input   id="cantidadIngrediente" type="text"></input>
     <br>
-    <br></br>
+
+    <span>Cantidad: </span><input id="cantidadIngrediente" type="text"></input>
+    <br>
+    <br>
+    <br>
+    
+    <button type="button" onclick="AgregarIngrediente()">Agregar Ingrediente</button>
 
     <div id="listaRecetas"></div>
-    <div id="listaPreparacion"></div>
-    <div id="listaIngredientes"></div>
-    <div id="listaCantidad"></div>
+
+
     <br></br>
     <button type="button" onclick="AgregarReceta()">Agregar</button>
     <button type="button" onclick="EliminarReceta()">Eliminar</button>
@@ -72,30 +35,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

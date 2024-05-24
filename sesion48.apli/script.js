@@ -1,123 +1,100 @@
-let recetas = [];
+let recetaActual = null;
 
-window.onload = function () {
-    if (localStorage.getItem("recetas")) {
-        recetas = JSON.parse(localStorage.getItem("recetas"));
-        mostrarRecetas();
-    }
-}
 
-function AgregarReceta() {
-    let receta = {
-        id: recetas.length + 1,
-        nombre: document.getElementById("nombreReceta").value,
-        preparacion: document.getElementById("preparacionReceta").value,
-        ingredientes: [
-            {
-                nombre: document.getElementById("nombreIngrediente").value,
-                cantidad: document.getElementById("cantidadIngrediente").value
-            }
-        ]
-    };
-
-    recetas.push(receta);
-
-    localStorage.setItem("recetas", JSON.stringify(recetas));
-
-    limpiarFormulario();
-
-    // No es necesario manipular 'receta' aquí
-    // mostrarRecetas();
-}
-
-function EliminarReceta(id) {
-    recetas = recetas.filter(receta => receta.id !== id);
-    localStorage.setItem("recetas", JSON.stringify(recetas));
-    mostrarRecetas();
-}
-
-function mostrarRecetas() {
-    let listaRecetas = document.getElementById("listaRecetas");
-    listaRecetas.innerHTML = "";
-
-    recetas.forEach(receta => {
-        let itemReceta = document.createElement("li");
-        itemReceta.textContent = receta.nombre;
-        let listaIngredientes = document.createElement("ul"); // Crear lista de ingredientes
-        // Iterar sobre los ingredientes y agregarlos a la lista
-        receta.ingredientes.forEach(ingrediente => {
-            let itemIngrediente = document.createElement("li");
-            itemIngrediente.textContent = `${ingrediente.nombre}: ${ingrediente.cantidad}`;
-            listaIngredientes.appendChild(itemIngrediente);
-        });
-
-        let botonEliminar = document.createElement("button");
-        botonEliminar.textContent = "Eliminar";
-        botonEliminar.onclick = function () {
-            EliminarReceta(receta.id);
-        };
-
-        itemReceta.appendChild(listaIngredientes); // Agregar la lista de ingredientes al elemento de la receta
-        itemReceta.appendChild(botonEliminar);
-        listaRecetas.appendChild(itemReceta);
+function LeerLocalstorage() {
+    const recetas = JSON.parse(localStorage.getItem('recetas')) || [];
+    const listaRecetasDiv = document.getElementById('listaRecetas');
+    listaRecetasDiv.innerHTML = '';
+    recetas.forEach((receta, index) => {
+        const recetaDiv = document.createElement('div');
+        recetaDiv.innerHTML = `
+            <h3>${receta.nombre}</h3>
+            <p>${receta.preparacion}</p>
+            <ul>
+                ${receta.ingredientes.map(ing => `<li>${ing.nombre} - ${ing.cantidad}</li>`).join('')}
+            </ul>
+            <button onclick="EliminarReceta(${index})">Eliminar</button>
+        `;
+        listaRecetasDiv.appendChild(recetaDiv);
     });
 }
 
-function limpiarFormulario() {
-    document.getElementById("nombreReceta").value = "";
-    document.getElementById("preparacionReceta").value = "";
-    document.getElementById("nombreIngrediente").value = "";
-    document.getElementById("cantidadIngrediente").value = "";
+function AgregarReceta() {
+    const nombreReceta = document.getElementById('nombreReceta').value;
+    const preparacionReceta = document.getElementById('preparacionReceta').value;
+    const nombreIngrediente = document.getElementById('nombreIngrediente').value;
+    const cantidadIngrediente = document.getElementById('cantidadIngrediente').value;
+
+    if (!nombreReceta || !preparacionReceta || !nombreIngrediente || !cantidadIngrediente) {
+        alert('Por favor, complete todos los campos.');
+        return;
+    }
+
+    const nuevaReceta = {
+        nombre: nombreReceta,
+        preparacion: preparacionReceta,
+        ingredientes: [{
+            nombre: nombreIngrediente,
+            cantidad: cantidadIngrediente
+        }]
+    };
+
+    recetaActual = nuevaReceta; // Asignar la nueva receta como la receta actual
+
+    const recetas = JSON.parse(localStorage.getItem('recetas')) || [];
+    recetas.push(nuevaReceta);
+    localStorage.setItem('recetas', JSON.stringify(recetas));
+
+    LeerLocalstorage();
+    document.getElementById('nombreReceta').value = '';
+    document.getElementById('preparacionReceta').value = '';
+    document.getElementById('nombreIngrediente').value = '';
+    document.getElementById('cantidadIngrediente').value = '';
 }
 
 
-receta.nombre = document.getElementById("nombreReceta").value;
-receta.preparacion = document.getElementById("preparacionReceta").value;
-receta.ingredientes.nombre = document.getElementById("nombreIngrediente").value;
-receta.ingredientes.cantidad = document.getElementById("cantidadIngrediente").value;
-//en estos casos es donde comienzo a llamar cada ad de mi html con los nombres que necesito
+function AgregarIngrediente() {
+    if (!recetaActual) {
+        alert('No hay receta actual para agregar ingredientes. Por favor, agregue una nueva receta primero.');
+        return;
+    }
 
+    // Obtenemos el valor de los campos de ingrediente
+    const nombreIngrediente = document.getElementById('nombreIngrediente').value.trim();
+    const cantidadIngrediente = document.getElementById('cantidadIngrediente').value.trim();
 
-let listaRecetas = document.getElementById("listaRecetas");
-let datosReceta = document.createElement("li");
-datosReceta.innerHTML = receta.nombre;
-datosReceta.innerHTML += "\n";
+    // Verificamos si se ha proporcionado al menos un nombre o una cantidad de ingrediente
+    if (!nombreIngrediente && !cantidadIngrediente) {
+        alert('Por favor, ingrese al menos un nombre o una cantidad de ingrediente.');
+        return;
+    }
 
-listaRecetas.appendChild(datosReceta)
+    // Creamos el nuevo ingrediente
+    const nuevoIngrediente = {
+        nombre: nombreIngrediente,
+        cantidad: cantidadIngrediente
+    };
 
-let listaPreparacion = document.getElementById("listaPreparacion");
-let datosPreparacion = document.createElement("ol");
-datosPreparacion.innerHTML += receta.preparacion;
-datosReceta.innerHTML += "\n";
+    // Agregamos el nuevo ingrediente a la receta actual
+    recetaActual.ingredientes.push(nuevoIngrediente);
 
-listaPreparacion.appendChild(datosPreparacion)
+    // Actualizamos la lista de recetas en el almacenamiento local
+    const recetas = JSON.parse(localStorage.getItem('recetas')) || [];
+    const indiceRecetaActual = recetas.findIndex(receta => receta.nombre === recetaActual.nombre);
+    recetas[indiceRecetaActual] = recetaActual;
+    localStorage.setItem('recetas', JSON.stringify(recetas));
 
-let listaIngredientes = document.getElementById("listaIngredientes");
-let datosIngrediente = document.createElement("ol");
-datosIngrediente.innerHTML += receta.ingredientes.nombre;
-datosIngrediente.innerHTML += receta.ingredientes.cantidad;
-datosReceta.innerHTML += "\n";
+    // Limpiamos los campos de ingrediente después de agregar
+    document.getElementById('nombreIngrediente').value = '';
+    document.getElementById('cantidadIngrediente').value = '';
 
-listaIngredientes.appendChild(datosIngrediente)
+    // Actualizamos la visualización de las recetas
+    LeerLocalstorage();
+}
 
-let listaCantidad = document.getElementById("listaCantidad");
-let datosCantidad = document.createElement("ol");
-datosCantidad.innerHTML += receta.ingredientes.cantidad;
-datosReceta.innerHTML += "\n";
-
-listaCantidad.appendChild(datosCantidad)
-
-
-document.getElementById("nombreReceta").value = "";
-document.getElementById("preparacionReceta").value = "";
-document.getElementById("nombreIngrediente").value = "";
-document.getElementById("cantidadIngrediente").value = "";
-
-
-
-function EliminarReceta() {
-    recetas.pop()
-
-    let listaRecetas = document.getElementById("listaRecetas");
-    listaRecetas.removeChild(listaRecetas.lastChild)
+function EliminarReceta(index) {
+    const recetas = JSON.parse(localStorage.getItem('recetas')) || [];
+    recetas.splice(index, 1);
+    localStorage.setItem('recetas', JSON.stringify(recetas));
+    LeerLocalstorage();
 }

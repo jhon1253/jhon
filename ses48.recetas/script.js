@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("formaReceta").addEventListener("submit", guardarReceta);
 
     // Agregar listeners para eliminar recetas
-    var listaRecetas = document.getElementById("recipe-list");
+    let listaRecetas = document.getElementById("recipe-list");
     listaRecetas.addEventListener("click", function(event) {
         if (event.target.classList.contains("eliminarReceta")) {
             eliminarReceta(event.target.parentElement);
@@ -17,16 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function agregarIngrediente() {
     // Crear elementos de input para el nuevo ingrediente
-    var divIngredientes = document.createElement("div");
+    let divIngredientes = document.createElement("div");
     divIngredientes.classList.add("ingredientes");
 
-    var inputNombre = document.createElement("input");
+    let inputNombre = document.createElement("input");
     inputNombre.type = "text";
     inputNombre.classList.add("nombreIngrediente");
     inputNombre.placeholder = "Ingrediente";
     inputNombre.required = true;
 
-    var inputCantidad = document.createElement("input");
+    let inputCantidad = document.createElement("input");
     inputCantidad.type = "text";
     inputCantidad.classList.add("cantidadIngrediente");
     inputCantidad.placeholder = "Cantidad";
@@ -37,7 +37,7 @@ function agregarIngrediente() {
     divIngredientes.appendChild(inputCantidad);
 
     // Obtener el contenedor de la lista de ingredientes y agregar el nuevo ingrediente
-    var listaIngredientes = document.querySelector(".listaIngredientes");
+    let listaIngredientes = document.querySelector(".listaIngredientes");
     listaIngredientes.appendChild(divIngredientes);
 }
 
@@ -45,14 +45,14 @@ function guardarReceta(event) {
     event.preventDefault(); // Evitar que se envíe el formulario
 
     // Obtener los valores del formulario
-    var nombreReceta = document.getElementById("nombreReceta").value;
-    var preparacionReceta = document.getElementById("preparacionReceta").value;
-    var listaIngredientes = [];
+    let nombreReceta = document.getElementById("nombreReceta").value;
+    let preparacionReceta = document.getElementById("preparacionReceta").value;
+    let listaIngredientes = [];
 
     // Recorrer todos los elementos de ingredientes
     document.querySelectorAll(".ingredientes").forEach(function(ingrediente) {
-        var nombreIngrediente = ingrediente.querySelector(".nombreIngrediente").value;
-        var cantidadIngrediente = ingrediente.querySelector(".cantidadIngrediente").value;
+        let nombreIngrediente = ingrediente.querySelector(".nombreIngrediente").value;
+        let cantidadIngrediente = ingrediente.querySelector(".cantidadIngrediente").value;
         
         // Verificar que se hayan ingresado ambos valores
         if (nombreIngrediente && cantidadIngrediente) {
@@ -64,7 +64,7 @@ function guardarReceta(event) {
     });
 
     // Crear un objeto con los datos de la receta
-    var receta = {
+    let receta = {
         nombre: nombreReceta,
         preparacion: preparacionReceta,
         ingredientes: listaIngredientes
@@ -79,24 +79,24 @@ function guardarReceta(event) {
 
 function mostrarRecetaEnVistaPrevia(receta) {
     // Crear elementos HTML para mostrar la receta en la vista previa
-    var recetaHTML = document.createElement("div");
+    let recetaHTML = document.createElement("div");
     recetaHTML.classList.add("receta");
 
-    var nombreRecetaHTML = document.createElement("h3");
+    let nombreRecetaHTML = document.createElement("h3");
     nombreRecetaHTML.textContent = receta.nombre;
 
-    var preparacionRecetaHTML = document.createElement("p");
+    let preparacionRecetaHTML = document.createElement("p");
     preparacionRecetaHTML.textContent = "Preparación: " + receta.preparacion;
 
-    var listaIngredientesHTML = document.createElement("ul");
+    let listaIngredientesHTML = document.createElement("ul");
     receta.ingredientes.forEach(function(ingrediente) {
-        var ingredienteHTML = document.createElement("li");
+        let ingredienteHTML = document.createElement("li");
         ingredienteHTML.textContent = ingrediente.nombre + ": " + ingrediente.cantidad;
         listaIngredientesHTML.appendChild(ingredienteHTML);
     });
     
     // Crear un botón para eliminar la receta
-    var btnEliminarReceta = document.createElement("button");
+    let btnEliminarReceta = document.createElement("button");
     btnEliminarReceta.textContent = "Eliminar Receta";
     btnEliminarReceta.classList.add("eliminarReceta");
 
@@ -107,7 +107,7 @@ function mostrarRecetaEnVistaPrevia(receta) {
     recetaHTML.appendChild(btnEliminarReceta);
 
     // Obtener el contenedor de la lista de recetas y agregar la nueva receta
-    var listaRecetas = document.getElementById("recipe-list");
+    let listaRecetas = document.getElementById("recipe-list");
     listaRecetas.appendChild(recetaHTML);
 }
 

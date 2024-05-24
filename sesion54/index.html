@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="nombreReceta">Nombre Usuario:</label>
+    <br>
+    <input type="text" id="nombreReceta" placeholder="Nombre" required>
+    <br>
+    <br>
+    <label for="email">correo electronico</label>
+    <br>
+    <input type="email" id="nombreReceta" placeholder="Correo" required>
+    <br>
+    <br>
+    <label for="contraseña">contraseña</label>
+    <br>
+    <input type="password" id="contraseña" placeholder="clave" required>
+    <br>
+    <br>
+    <label for="edad">Edad</label>
+    <br>
+    <input type="number" id="edad" placeholder="clave" required>
+    <br>
+    <br>
+    <label for="fechaNacimiento">Edad</label>
+    <br>
+    <input type="date" id="fechaNacimiento" required>
+    <br>
+    <br>
+    <label for="estarClase">¿Estas en clase?</label>
+    <input type="checkbox" id="estarClase" required>
+    <br>
+    <br>
+    <label for="paises">Pais</label>
+    <select type="text">
+        <option value="eeuu">EE.UU</option>
+        <option value="mexico">Mexico</option>
+        <option value="canada">Canada</option>
+        <option value="colombia"selected>Colombia</option>
+        <option value="rusia">Rusia</option>
+        <option value="españ">España</option>
+        <option value="portugal">Portugal</option>
+    </select>
+<br>
+<br>
+<fieldset>
+<legend> Color:</legend>
+<label for="colorfavorito">Red</label>
+<input type="radio" id="colorfavorito" name="color" value="color1">
+<br>
+<label for="colorfavorito">Green</label>
+<input type="radio" id="colorfavorito" name="color" value="color2">
+<br>
+<label for="colorfavorito">Purple</label>
+<input type="radio" id="colorfavorito" name="color" value="color3">
+<br>
+</fieldset>
+<br>
+<br>
+<div>
+<legend> Segundo Color:</legend>
+<label for="colorfavorito">Red</label>
+<input type="color" id="colorfavorito" name="color" value="color1">
+<br>
+</div>
+<input class=" m-2 btn btn-primary" type="submit">
+<input class=" m-2 btn btn-secondary" type="reset">
+<br>
+<br>
+
+<div class="m-4">
+    <input class="from-control" type="file">
+</div>
+<meter style="height: 30px;" value="2" min="0" max="10"></meter>
+<progress value="70" max="100">100</progress>
+
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" id="a" value="50">
+    <input type="number" id="a" value="50">
+    = <output name="result" for="a b">100</output>
+</form>
+</body>
+</html>
+
