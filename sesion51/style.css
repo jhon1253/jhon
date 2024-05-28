@@ -18,3 +18,20 @@ section img:hover{
     filter: contrast(120%);
 
 }
+
+header{
+    background-color: rgb(158, 161, 199);
+}
+main{
+    background-color: rgb(158, 161, 199);   
+}
+figure{
+    background-color: rgb(158, 161, 199);
+}
+
+.centroL {
+    text-align: center; /* Centra el contenido de la lista */
+    list-style-type: none; /* Quita los marcadores de lista predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+  }
+  
