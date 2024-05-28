@@ -1,0 +1,15 @@
+.flex-container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    gap: 20px;
+}
+.flex-item {
+    padding: 10px;
+    border: 3px solid #d31717;
+    background-color: aqua;
+}
+  
