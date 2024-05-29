@@ -1,4 +1,58 @@
-body{
+#background-image {
+    background-image: url("https://i.pinimg.com/originals/a3/87/aa/a387aad286477744724104c9b605de65.jpg" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vh; /* Para que el contenedor ocupe toda la altura de la pantalla */
+}
+body,  html{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+background-image: url(https://w0.peakpx.com/wallpaper/222/22/HD-wallpaper-zero-two-02.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+nav ul{
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+}
+nav ul li{
+    flex: auto;
+    padding: 10px;
+    background-color: rgb(128, 126, 36);
+    font-size: 20px;  
+    border: 1px solid black;
+    text-align: center;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+nav ul li:hover{
+    background-color: rgb(177, 174, 9);
+}
+h1{
+    text-align: center;
+    color: rgb(33, 181, 192);
+}
+div{
+    text-align: center;
+    color: rgb(26, 160, 71);
+}
+
+
+
+
+
+
+
+
+
+/* body{
     background-color: rgb(24, 19, 12);
 }
 .header{
@@ -20,7 +74,7 @@ body{
 .header .nav-link li{
     display: inline-block;
     padding: 0 20px;
-}
+} */
 /* .header .logo{
     cursor: pointer;
 }
