@@ -1,11 +1,11 @@
-#background-image {
+#imagencab {
     background-image: url("https://i.pinimg.com/originals/a3/87/aa/a387aad286477744724104c9b605de65.jpg" );
     background-size: cover;
     background-repeat: no-repeat;
-    height: 30vh; /* Para que el contenedor ocupe toda la altura de la pantalla */
+    height: 150px; /* Para que el contenedor ocupe toda la altura de la pantalla */
 }
 body,  html{
-margin: 0;
+ margin: 10; /*para el espcio entre ladp y ladp */
 padding: 0;
 box-sizing: border-box;
 font-family: sans-serif;
@@ -41,7 +41,7 @@ h1{
 }
 div{
     text-align: center;
-    color: rgb(26, 160, 71);
+    color: rgb(0, 250, 83);
 }
 
 
