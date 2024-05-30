@@ -5,8 +5,8 @@
     height: 150px; /* Para que el contenedor ocupe toda la altura de la pantalla */
 }
 body,  html{
- margin: 10; /*para el espcio entre ladp y ladp */
-padding: 0;
+margin: 5px; /*para el espcio entre ladp y ladp */
+padding: 5px;
 box-sizing: border-box;
 font-family: sans-serif;
 background-image: url(https://w0.peakpx.com/wallpaper/222/22/HD-wallpaper-zero-two-02.jpg);
@@ -19,6 +19,8 @@ nav ul{
     list-style: none;
     display: flex;
     cursor: pointer;
+    flex-wrap: wrap;
+
 }
 nav ul li{
     flex: auto;
@@ -43,6 +45,7 @@ div{
     text-align: center;
     color: rgb(0, 250, 83);
 }
+
 
 
 
