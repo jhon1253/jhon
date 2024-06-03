@@ -26,14 +26,14 @@ img{
 }
 
 /* Media query para pantallas más pequeñas */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .columna {
         flex: 1 1 50%; /* Ajusta el tamaño de las columnas al 50% en pantallas más pequeñas */
         max-width: 50%;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 300px) {
     .columna {
         flex: 1 1 100%; /* Ajusta el tamaño de las columnas al 100% en pantallas muy pequeñas */
         max-width: 100%;

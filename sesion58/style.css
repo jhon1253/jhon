@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    width: 300px;
+    height: 200px;
+    position: absolute; left: 40%;
+    background-color: rgb(0, 0, 255);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.container{
+background-color: #e9e0e0;
+width: 300px;
+height: 300px;
+padding: 20%;
+border: 10px solid #a00404;
+border-radius: 10%;
+}
+
+.imagen{
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-bottom: 20px;
+}
+.navegar a{
+    text-align: center;
+    text-decoration: none;
+    color: #154e8a;
+    margin: 0 4px; 
+}
+.navegar a:hover{
+    text-decoration: underline;
+}
+.texto{
+    font-size: 14px;
+    color: #695a5a;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.nombre{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0%;
+    margin-bottom: 10px;
+    text-align: center;
+}
