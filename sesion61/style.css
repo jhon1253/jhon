@@ -1,20 +1,54 @@
 body{
     display: flex;
+    align-items: center;
     flex-direction: column;
     background-image: url(https://wwwhatsnew.com/wp-content/uploads/2022/03/Estas-son-las-mejores-apps-de-fondos-de-pantalla-4K-y-QHD-para-2022.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 95vh;
 }
 .container{
+    background-color: rgb(0, 255, 34);
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 50vh;
+    border: 5px solid #380505; /* Borde sólido de 2px */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 20px 20px rgb(17, 177, 65);
 }
-.input{
+h1{
+    color: rgb(163, 152, 2);
+}
+p{
+    color: rgb(255, 255, 255);
+}
+ul{
+    color: rgb(146, 5, 146);
+}
+.item .input{
     background-color: aqua;
     border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    padding: 5px;
+    
 }
-.boton{
-    background-color: brown;
+.item .input:hover{
+    color: rgb(243, 243, 243);
+    background-color: rgb(19, 183, 212);
+    transition: background-color 0.3s, color 0.3s;
+}
+.item .boton{
+    background-color: rgb(255, 17, 0);
+    border: none;
     border-radius: 20%;
+    cursor: pointer;
+    padding: 9px;
+}
+.item .boton:hover{
+    color: rgb(243, 243, 243);
+    background-color: rgb(156, 12, 12);
+    transition: background-color 0.3s, color 0.3s;
 }

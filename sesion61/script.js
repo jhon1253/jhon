@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const tareas = document.getElementById('tareas');
-    const entradaTarea = document.getElementById('entradaTarea');
-    const listaTareas = document.getElementById('listaTareas');
+    const tareaUsuario = document.getElementById('tareaUsuario');
+    const tareasPendientes = document.getElementById('tareasPendientes');
   
-    tareas.addEventListener('submit', function(event) {
-      event.preventDefault();
-      if (entradaTarea.value !== '') {
+    tareas.addEventListener('submit', function(evento) {
+      evento.preventDefault();
+      if (tareaUsuario.value !== '') {
         const nuevaTarea = document.createElement('li');
-        nuevaTarea.innerText = entradaTarea.value;
+        nuevaTarea.innerText = tareaUsuario.value;
         nuevaTarea.addEventListener('click', function() {
           this.remove();
         });
-        listaTareas.appendChild(nuevaTarea);
-        entradaTarea.value = '';
+        tareasPendientes.appendChild(nuevaTarea);
+        tareaUsuario.value = '';
       }
     });
   });
