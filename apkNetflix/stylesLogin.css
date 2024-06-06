@@ -1,0 +1,125 @@
+body {
+    background-image: url(Netflix.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c4c1c1;
+    opacity: 23;
+    margin: 0;
+    background-size: cover;
+}
+.body-div{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+.header img{
+    width: 158px;
+    margin-left:120px;
+    margin-top: 20px;
+}
+.header{
+    width: 148px;
+}
+.contenedor-prinsipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+.contenedor{
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    padding: 48px;
+    width: 314px;
+    padding-bottom: 0;
+}
+.header-main h1{
+    font-size: 32px ;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.form input {
+    display: flex;
+    width: 80%;
+    background-color: rgba(59, 59, 59, 0.63);
+    border: 1px #606060 solid ;
+    border-radius: 2px;
+    height: 30px;
+}
+
+.iniciarSesion{
+    background-color: #C11119;  
+    color: #fff;
+    width: 82%;
+    border: none;
+    padding: 5px 0;
+}
+.CodigoInicioSeision{
+    background-color: #272727;  
+    color: #ffffff;
+    width: 82%;
+    border: none;
+    padding: 5px 0;
+}
+a{
+    color: #fff;
+}
+
+.reCAPTCHA{
+    font-size: 13px;
+}
+.reCAPTCHA button{
+    background-color: transparent;
+    color: #003cff;
+    border: none;
+    font-size: 15px;
+}
+
+.container{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+}
+
+.container p a, a, a:visited,a:hover {
+    text-decoration: none;
+    color: #3c3d3b;
+}
+.container ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container ul li {
+    margin: 8px;
+}
+.OlvidasteContraseña,.Suscribete{
+    color: #fff;
+}
+@media (max-width: 650px) {
+    body{
+        background-image:url();
+        background-color: #000;
+    }
+    .contenedor-prinsipal,.contenedor{
+        margin: 0 10%;
+        display: flex;
+        justify-content: start;
+    }
+    .form{
+        margin-top: 40px;
+    }
+}

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
       evento.preventDefault();
       if (tareaUsuario.value !== '') {
         const nuevaTarea = document.createElement('li');
-        nuevaTarea.innerText = tareaUsuario.value;
+        nuevaTarea.textContent = tareaUsuario.value;
         nuevaTarea.addEventListener('click', function() {
           this.remove();
         });

@@ -1,18 +1,16 @@
 body{
     margin: 0;
-    background-image: url(Netflix.jpg);
     font-family: Arial, sans-serif;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.sombra{
-    background-image: linear-gradient();
+     background-image: url(Netflix.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
 }
 .header{
-    background-color: #141414;
+    background-color:#141414 ;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
     padding: 20px;
+
 }
 .header nav{
     display: flex;
@@ -22,26 +20,24 @@ body{
     width: 100px;
 }
 .header nav a{
-    color: aliceblue;
+    color: #fff;
     text-decoration: none;
     margin-right: 20px;
 }
 .header button{
     background-color: #d81f26;
     border: none;
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
     padding: 10px;
 }
-
-.main{
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     height: 80vh;
     flex-direction: column;
-
 }
 .main .container{
     display: flex;
@@ -52,7 +48,7 @@ body{
 }
 .main button{
     background-color: #d81f26;
-    color: aliceblue;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -62,17 +58,17 @@ body{
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color:#141414d7;
+    background-color: #141414cb;
 }
 footer{
     background-color: #141414;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    color: white;
-
+    flex-direction:column;
+    color: #fff;
 }
-footer p a,a:visited,a:hover,a:link{
+footer p a,a:visited,
+a:hover, a:link {
     text-decoration: none;
     color: #b9b9b9;
 }
@@ -81,34 +77,8 @@ footer ul{
     list-style: none;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 700px;
+    max-width: 700x;
 }
 footer ul li{
     margin: 8px;
-}
-
-.form-container{
-    background-color: #141414dd;
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 700px;
-}
-
-.form-container h3{
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.form-container form{
-    display: flex;
-}
-
-.form-container form input{
-   margin-bottom: 8px;
-   background-color: #ffffff10;
-   color: #ffff;
-}
-
-.form-container .btn/code{
-   
 }
