@@ -22,9 +22,9 @@ body{
     width: 100px;
 }
 .header nav a{
-    color: aliceblue;
+    color: rgb(244, 248, 252);
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .header button{
     background-color: #d81f26;
@@ -86,6 +86,23 @@ footer ul{
 footer ul li{
     margin: 8px;
 }
+
+
+.contenedor2 .cuadros {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+} /*  hola care pastelo  */
+.container .cuadros .parra{
+    display: flex;
+    justify-content: center;
+}
+/* aq */
+.cuadros .botton{
+    color: #b9b9b9;
+}
+
 
 .form-container{
     background-color: #141414dd;

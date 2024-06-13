@@ -1,0 +1,33 @@
+body{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#boton {
+    width: 50px;
+  height: 50px;
+  /* centrar vertical y horizontalmente */
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  }
+
+#abuela{
+    background-color: yellow;
+}
+#mama{
+    background-color: blue;
+}
+#hija{
+    background-color: red;
+}
+
+main .container{
+    padding: 60px;
+}
+
+
+
+  

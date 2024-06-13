@@ -3,48 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Netflix</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="sombra">
-    <header class="header">
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg?authuser=0" alt="">
-        <a  href="./index2.html">
-        <button>
-            Iniciar sesión
-        </button>
-    </a>
-
-    </header>
-    <main class="main">
-        <div class="container">
-        <h2>Peliculas, series ilimitadas y mucho mas.</h2>
-        <h3>Disfruta cuando quieras, Cansela cuando puedas.</h3>
-        <form>
-            <input type="email" placeholder="email">
-            <button type="submit">Comenzar</button>
-        </form>
-        </div>
-    </main>
-    <footer>
-        <p>¿Preguntas? Llama al <a href="#"><tel>123-456-789</tel></a></p>
-        <nav>
-        <ul class="listas">
-            <li><a href="#">Preguntas frecuentes</a></li>
-            <li><a href="#">Centro de ayuda</a></li>
-            <li><a href="#">Cuenta</a></li>
-            <li><a href="#">Prensa</a></li>
-            <li><a href="#">Relaciones con inversionista</a></li>
-            <li><a href="#">Terminos de uso</a></li>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Preferencias de cookies</a></li>
-            <li><a href="#">Informacion corporativas</a></li>
-            <li><a href="#">Contactanos</a></li>
-        </ul>
-    </nav>
-    </footer>
-</div>
-
+        <header class="header">
+            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg?authuser=0" alt="">
+            <nav class="nav" id="nav">
+                <button class="cerrarMenu" id="cerrar"><i class="bi bi-x"></i></button>
+                <ul class="nav-list" >
+                    <li> <a href="">Inicio</a></li>
+                    <li> <a href="">Series</a></li>
+                    <li> <a href="">Peliculas</a></li>
+                    <li> <a href="">Novedades</a></li>
+                    <li> <a href="">Mi lista</a></li>
+                </ul>
+            </nav>
+            <div class="botones">
+                <a  href="./index2.html">
+                    <button class="iniciar">
+                        Iniciar sesión
+                    </button>
+                </a>
+                <button id="abrir" class="abrirMenu" ><i class="bi bi-list"></i></button>
+            </div>
+        </header>
+            <main class="main">
+                <div class="container">
+                <h2>Peliculas, series ilimitadas y mucho mas.</h2>
+                <h3>Disfruta cuando quieras, Cansela cuando puedas.</h3>
+                <form>
+                    <input type="email" placeholder="email">
+                    <button type="submit">Comenzar</button>
+                </form>
+                </div>
+            </main>
+                <footer>
+                    <p>¿Preguntas? Llama al <a href="#"><tel>123-456-789</tel></a></p>
+                    <nav>
+                        <ul class="listas">
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Centro de ayuda</a></li>
+                            <li><a href="#">Cuenta</a></li>
+                            <li><a href="#">Prensa</a></li>
+                            <li><a href="#">Relaciones con inversionista</a></li>
+                            <li><a href="#">Terminos de uso</a></li>
+                            <li><a href="#">Privacidad</a></li>
+                            <li><a href="#">Preferencias de cookies</a></li>
+                            <li><a href="#">Informacion corporativas</a></li>
+                            <li><a href="#">Contactanos</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
