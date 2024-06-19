@@ -1,7 +1,7 @@
 body{
     font-family: Arial, sans-serif;
-     margin: 0;
-     background-color: #000000;
+    margin: 0;
+    background-color: #000000;
    
 }
 .header {
@@ -54,10 +54,10 @@ h3{
     padding-left: 20px;
 }
 .imagenes{
-    display: flex;
     position: relative;
+    display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow-x:auto;
     width: 100%;
     scrollbar-color: #000 #000;
 }
@@ -65,7 +65,34 @@ h3{
     height: 120px;
     width: 200px;
     margin-left: 5px;
+}
+@media (max-width: 568px){
+    .barra.open{
+        right: 0;
+        top: 75px;
+    }
+    .barra{
+        height: 100%;
+        width: 250px;
+        background: #141414;
+        position: fixed;
+        top: 70px;
+        right: -250px;
+        z-index: 0;
+        transition: right 0.3s ease;
+    }
+    .galeria{
+        display: block;
+    }
 
 }
-
-
+@media only screen and (max-width: 600px) {
+    .contenido {
+        padding: 0 10px; /* Reducir el espacio alrededor del contenido para pantallas pequeñas */
+    }
+    .header .container {
+        flex-direction: column; /* Apilar elementos del menú en pantallas pequeñas */
+        align-items: center; /* Centrar elementos del menú en pantallas pequeñas */
+    }
+    /* Puedes añadir más estilos específicos para pantallas pequeñas aquí */
+}

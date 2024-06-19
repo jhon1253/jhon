@@ -21,6 +21,11 @@ body{
 .header .logo{
     width: 100px;
 }
+.main .inici{
+    justify-content: center;
+    display: flex;
+    width: 220px;
+}
 .header nav a{
     color: rgb(244, 248, 252);
     text-decoration: none;
@@ -43,6 +48,7 @@ body{
     flex-direction: column;
 
 }
+
 .main .container{
     display: flex;
     flex-direction: column;
@@ -122,10 +128,90 @@ footer ul li{
 
 .form-container form input{
    margin-bottom: 8px;
-   background-color: #ffffff10;
+   background-color: #8d111110;
    color: #ffff;
 }
 
-.form-container .btn/code{
-   
+body{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    font-family: sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #ececec;
+
+}
+.logo{
+    max-width: 5rem;
+}
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-list li a{
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+}
+.abrirMenu, .cerrarMenu{
+    display: none;
+}
+header .botones{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .botones .iniciar{
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 550px){
+    .abrirMenu,
+    .cerrarMenu{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+
+    }
+    .abrirMenu{
+        color: #e4d5d5;
+    }
+    .cerrarMenu{
+        color: #ececec;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-list li a{
+        color: #e2cdcd;
+    }
 }
