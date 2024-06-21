@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
           botonEliminar.addEventListener('click', function() {
             nuevaTarea.remove()
             botonCompletar.remove()
-            guardarTareas();
+            
             this.remove();
          });
 

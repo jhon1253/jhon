@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript try catch</h2>
+
+<p>TENGO UNOS <b>NUMEROS</b> QUE ESTA ENTRE EL 1 Y EL 10, EN EL CUADRO DE ABAJO PODRAS INGRESAR UN NUMERO EL CUAL SERA LA POSOCION DEL NUMERO QUE OBTENDRAS</p>
+
+<input id="input" type="text">
+<button type="button" onclick="myFunction()">click</button>
+<p id="parrafo"></p>
+
+<script>
+
+const array = [1, 2, 4, 3, 6, 9, 8, 5, 7, 0];
+
+function myFunction() {
+  const message = document.getElementById("parrafo");
+  message.innerHTML = "";
+  const numeroIngre = document.getElementById("input").value;
+  try { 
+    if(numeroIngre.trim() == "")  throw "No existe";
+    if(isNaN(numeroIngre)) throw "no es un numero";
+    numeroIngre = Number(numeroIngre);
+    if(numeroIngre < 1)  throw "Esta muy por de bajo del rango";
+    if(numeroIngre > 10)   throw "Esta muy por encima del rango";
+  }
+  catch(err) {
+    message.innerHTML = "El numero que contiene la posicion " + input.value + " es el numero: " + array[numeroIngre - 1];
+  }
+  finally {
+    document.getElementById("input").value = "";
+  }
+}
+</script>
+
+</body>
+</html>
