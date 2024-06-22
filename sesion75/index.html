@@ -19,14 +19,14 @@ function myFunction() {
   message.innerHTML = "";
   const numeroIngre = document.getElementById("input").value;
   try { 
-    if(numeroIngre.trim() == "")  throw "No existe";
+    if(numeroIngre.trim() == "")  throw "No hay numero";
     if(isNaN(numeroIngre)) throw "no es un numero";
-    numeroIngre = Number(numeroIngre);
     if(numeroIngre < 1)  throw "Esta muy por de bajo del rango";
     if(numeroIngre > 10)   throw "Esta muy por encima del rango";
+    message.innerHTML = "El numero que contiene la posicion " + input.value + " es el numero: " + array[numeroIngre - 1];
   }
   catch(err) {
-    message.innerHTML = "El numero que contiene la posicion " + input.value + " es el numero: " + array[numeroIngre - 1];
+    message.innerHTML = "error, " + err;
   }
   finally {
     document.getElementById("input").value = "";
