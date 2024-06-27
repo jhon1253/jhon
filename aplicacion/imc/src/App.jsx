@@ -1,10 +1,17 @@
 import { useState } from 'react'
 import googleLogo from '/googleLogo.svg'
 import bingLogo from '/bing1.svg'
+import logoopersonal from '/logopersona.svg'
 import './App.css'
+
+import datos from './database/datos.json'
+console.log(datos)
+console.log(datos.empleado)
+console.log(datos.empleado.nombre)
 
 function App() {
   const [count, setCount] = useState(0)
+
 
   return (
     <>
@@ -16,18 +23,23 @@ function App() {
           <img src={bingLogo} className="logo react" alt="google logo" />
         </a>
       </div>
-      <h1>¡HOLA MUNDO!</h1>
+      <h1>¡BUSCADOR!</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          cantidad de busqueda {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <br></br>
+        
+          <code>Espero encuentres</code> lo que buscas!
+          <div>
+            <img src={logoopersonal} className='logo personal' alt="logo personal" />
+          <p>{datos.empleado.nombre} {datos.empleado.apellido}</p>
+        <div/>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      </div>
     </>
   )
 }
