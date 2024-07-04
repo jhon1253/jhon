@@ -28,3 +28,20 @@ module.exports = {
     obtenerInfDelSistema,
     tiempoComputador
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+fs.readFile(filePath, 'utf-8', (err,updatedData)=>{
+    if(err) throw err;
+    console.log("Contenido actualizado del archivo : \n",updatedData)
+})
