@@ -33,7 +33,7 @@ function delay(ms){
     });
  }
 
-// func asyn que usa await para obtener datos
+// func asyn que usa nb jjbhu await para obtener datos
 
 async function getData(){
     console.log('Obteniendo datos...');
