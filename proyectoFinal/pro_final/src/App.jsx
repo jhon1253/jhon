@@ -2,27 +2,33 @@ import { useState } from 'react'
 import './App.css'
 import obtenerProductos from './script.jsx';
 
-async function main() {
-    try {
-        const productos = await obtenerProductos();
-        console.log("Productos obtenidos:", productos);
-        // Aquí puedes hacer lo que necesites con los productos obtenidos
-    } catch (error) {
-        console.error("Error en la aplicación:", error);
-    }
-}
+// src/App.jsx
+import React, { useEffect, useState } from 'react';
 
-main();
+const App = () => {
+  const [products, setProducts] = useState([]);
 
-
-function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.error('Error fetching products:', error));
+  }, []);
 
   return (
-    <>
-      
-    </>
-  )
-}
+    <div>
+      <h1>Productos</h1>
+      <div className="product-list">
+        {products.map(product => (
+          <div key={product.id} className="product-card">
+            <img src={product.image} alt={product.title} />
+            <h3>{product.title}</h3>
+            <p>{product.price}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default App
+export default App;

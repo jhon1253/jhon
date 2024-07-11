@@ -1,26 +1,24 @@
-// server.js
 
 const express = require('express');
-const axios = require('axios');
+const fetch = require('node-fetch');
 
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
-// Ruta para obtener y mostrar los productos desde la API
-app.get('/productos', async (req, res) => {
-    try {
-        // Hacer la solicitud a la API
-        const response = await axios.get('https://fakestoreapi.com/products');
-
-        // Devolver los productos obtenidos como JSON
-        res.json(response.data);
-    } catch (error) {
-        console.error('Error al obtener los productos:', error);
-        res.status(500).json({ error: 'Error al obtener los productos' });
-    }
+// Ruta para obtener y mostrar los productos
+app.get('/', async (req, res) => {
+  try {
+    const response = await fetch('https://fakestoreapi.com/products');
+    const products = await response.json();
+    // Renderizar los productos (puedes adaptar esto según tu método de renderizado, por ejemplo, con EJS, Pug, etc.)
+    res.json(products);
+  } catch (error) {
+    console.error('Error al obtener productos:', error);
+    res.status(500).json({ error: 'Hubo un error al obtener los productos' });
+  }
 });
 
 // Iniciar el servidor
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
