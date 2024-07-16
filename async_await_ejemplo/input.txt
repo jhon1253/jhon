@@ -1,0 +1,2 @@
+simular la realización de varias operaciones asincrónicas utilizando async/await. Las operaciones son 
+Este es el contenido adicional. 
