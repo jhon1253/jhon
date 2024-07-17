@@ -1,24 +1,18 @@
-import './profile.css'
-function Profile({name,img,telephone,address,age}) {
-  console.log(name)
-    return (
-      <div className="card-person">
-      <img
-      className="card-image"
-        src={img}
-        alt={name}
+import "./profile.css"
+
+function Profile({ name, img, telephone, address, age }) {
+  return (
+    <div className="card-person">
+      <img className="card-image" src={img} alt={name} 
       />
       <div className="card-content">
-      <h3>{name}</h3>
-        <p>Telefono:{telephone}</p>
-        <p>Direccion:{address}</p>
-        <p>Edad:{age}</p>
-        
+        <h3>{name}</h3>
+        <p>Telefono: {telephone}</p>
+        <p>Dirección: {address}</p>
+        <p>Edad: {age}</p>
       </div>
-      </div>
-      
-    );
-  }
+    </div>
+  );
+}
 
-
-  export default Profile
+export default Profile

@@ -1,11 +1,11 @@
 import React from "react";
-import Profile from "./profile";
 
-const listPeople = ({children}) => {
-    return (
-        <div className="list-container">{children}</div>
-    )
+const Product = ({ children }) => {
+  return (
+    <div className="product">
+      <span>{children}</span>
+    </div>
+  );
+};
 
-}
-
-export default listPeople
+export default Product;
