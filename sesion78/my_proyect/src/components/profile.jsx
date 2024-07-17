@@ -1,7 +1,8 @@
+import './profile.css'
 function Profile({name,img,telephone,address,age}) {
   console.log(name)
     return (
-      <div className="card">
+      <div className="card-person">
       <img
       className="card-image"
         src={img}
