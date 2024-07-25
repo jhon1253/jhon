@@ -14,24 +14,23 @@ app.get("/name", (req, res) => {
 
 
 app.get("/platform", (req, res) => {
-  const platform = os.platform(); // Corregido
-  console.log(platform); // win32
-  res.send(platform);
+  const platform = os.platform(); 
+  console.log(platform); //win 32
+  res.send(`${platform}`);
 });
 
 
 app.get("/type", (req, res) => {
   const nameOs = os.type();
-
   console.log(nameOs);
-  res.send(nameOs);
+  res.send(`${nameOs}`);
 });
 
 
 app.get("/uptimeOS", (req, res) => {
-  const status = os.uptime();
-  console.log(status); // 95156
-  res.sendStatus(status);
+  const uptimeOS = os.uptime();
+  console.log(uptimeOS); // 95156
+  res.send(`${uptimeOS}`); //corr
 });
 
 
