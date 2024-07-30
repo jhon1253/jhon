@@ -1,0 +1,41 @@
+.itemCard {
+    width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    color: #333;
+    margin: 1rem;
+    /* padding: 1rem; */
+    display: flex;
+    justify-content:center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.itemCardImage {
+    width: 100%;
+    /* border-radius: 8px; */
+}
+
+.itemCardTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.itemCardDescription {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.itemCardInfoWrapper {
+    padding: 0.5rem;
+}
+
+.itemCardInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}	
