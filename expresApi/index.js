@@ -32,6 +32,17 @@ const brand = [
   { id: 6, name: "KTM" },
 ];
 
+const years = [
+  { id: 1, year: 2023 },
+  { id: 2, year: 2022 },
+  { id: 3, year: 2021 },
+  { id: 4, year: 2023 },
+  { id: 5, year: 2022 },
+  { id: 6, year: 2021 },
+  { id: 7, year: 2024 },
+  { id: 8, year: 2023 },
+];
+
 
 
 app.get("/categories", (req, res) => {
@@ -46,25 +57,38 @@ app.get("/brand", (req, res) => {
   res.json(brand);
 });
 
+app.get("/years", (req, res) => {
+  res.json(years);
+});
+
 
 
 app.get("/products/:id", (req, res) => {
   const productId = parseInt(req.params.id);
   const product = products.find((p) => p.id === productId);
 
-
-
 product ? res.json(product) : res.status(404).json({ message: "Product not found" });
-
 });
+
 
 app.get("/categories/:id", (req, res) => {
   const categoriId = parseInt(req.params.id);
   const categori = categories.find((p) => p.id === categoriId);
 
-  
   categori ? res.json(categori) : res.status(404).json({ message: "Product not found" });
 });
+
+app.get("/years/:id", (req, res) => {
+  const yearssId = parseInt(req.params.id);
+  const year = years.find((p) => p.id === yearssId);
+
+  year
+    ? res.json(year)
+    : res.status(404).json({ message: "Product not found" });
+});
+
+
+
 
 app.listen(port, () => {
   console.log(`servidor http://localhost:${port}`);
