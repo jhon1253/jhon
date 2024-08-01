@@ -84,12 +84,9 @@ app.get("/years/:id", (req, res) => {
 
   year
     ? res.json(year)
-    : res.status(404).json({ message: "Product not found" });
+    : res.status(404).json({ message: "Product nnot foound" });
+
 });
-
-
-
-
 app.listen(port, () => {
   console.log(`servidor http://localhost:${port}`);
 });
